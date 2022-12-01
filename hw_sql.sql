@@ -26,12 +26,6 @@ performer_id integer references Performer(id),
 constraint ap primary key (album_id, performer_id)
 );
 
-CREATE TABLE IF NOT EXISTS TrackAlbum (
-id serial PRIMARY KEY,
-album_id integer REFERENCES Album(id),
-track_id integer REFERENCES Track(id),
-CONSTRAINT att PRIMARY KEY (album_id, track_id)
-);
 
 create table if not exists Track (
 id serial primary key,
